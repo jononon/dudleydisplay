@@ -50,13 +50,13 @@ $(document).ready(function() {
     dataType: 'json',
   }).done(function(result) {
     htmlstring = "<table style='color:white;font-size:2.2vh'>";
-    for (var i = 0; i < Math.min(result.response.docs.length,4); i++) {
+    for (var i = 0; i < Math.min(result.response.docs.length,3); i++) {
       htmlstring+="<tr><td>"+result.response.docs[i].headline.main+": "+result.response.docs[i].snippet+"</td></tr>";
     }
     htmlstring+= "</table>";
     $('#news1').html(htmlstring);
     htmlstring = "<table style='color:white;font-size:2.2vh'>";
-    for (var i = Math.min(result.response.docs.length,4); i < Math.min(result.response.docs.length,8); i++) {
+    for (var i = Math.min(result.response.docs.length,3); i < Math.min(result.response.docs.length,6); i++) {
       htmlstring+="<tr><td>"+result.response.docs[i].headline.main+": "+result.response.docs[i].snippet+"</td></tr>";
     }
     htmlstring+= "</table>";
